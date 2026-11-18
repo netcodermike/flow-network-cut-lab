@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Adjust link capacities in a small flow network and see the bottleneck cut that limits throughput.">
+  <title>Flow Network Cut Lab</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+<main>
+  <div class="heading">
+    <div><h1>Flow Network Cut Lab</h1><p>Adjust link capacities in a small flow network and see the bottleneck cut that limits throughput.</p></div>
+    <a href="https://github.com/netcodermike/flow-network-cut-lab">Project source ↗</a>
+  </div>
+  <div class="workspace">
+    <section class="panel stage" aria-label="Project workspace">
+      <canvas width="760" height="414" aria-label="Directed flow network with flow over capacity and highlighted minimum cut edges"></canvas><p id="cut" class="extra"></p>
+      <p id="reading" role="status"></p>
+    </section>
+    <section class="panel controls" aria-label="Controls">
+      <form id="settings"><label for="source-a">Source → A<output id="source-a-value" for="source-a"></output><input id="source-a" type="range" min="0" max="20" step="1" value="7"></label><label for="source-b">Source → B<output id="source-b-value" for="source-b"></output><input id="source-b" type="range" min="0" max="20" step="1" value="4"></label><label for="a-b">A → B<output id="a-b-value" for="a-b"></output><input id="a-b" type="range" min="0" max="20" step="1" value="3"></label><label for="a-sink">A → sink<output id="a-sink-value" for="a-sink"></output><input id="a-sink" type="range" min="0" max="20" step="1" value="4"></label><label for="b-sink">B → sink<output id="b-sink-value" for="b-sink"></output><input id="b-sink" type="range" min="0" max="20" step="1" value="5"></label><p>Gold edges cross the minimum cut. Green nodes are reachable from the source through unused residual capacity.</p></form>
+    </section>
+  </div>
+</main>
+</body>
+</html>
